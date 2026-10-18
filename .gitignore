@@ -1,0 +1,10 @@
+build/
+install/
+log/
+Testing/
+cmake-build-*/
+compile_commands.json
+.cache/
+*.pcd
+*.ply
+*.user
