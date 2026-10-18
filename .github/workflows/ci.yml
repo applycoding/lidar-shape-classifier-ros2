@@ -59,8 +59,11 @@ jobs:
       - name: Build
         shell: bash
         run: |
-          set -euxo pipefail
+          set -exo pipefail
+          # Humble's setup.bash reads an optional trace variable.
+          set +u
           source /opt/ros/humble/setup.bash
+          set -u
           colcon build \
             --packages-select lidar_shape_classifier \
             --cmake-args -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=OFF
