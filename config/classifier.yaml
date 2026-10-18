@@ -1,0 +1,18 @@
+shape_classifier:
+  ros__parameters:
+    input_topic: /points
+    marker_topic: /shape_markers
+    non_ground_topic: /shape_non_ground
+    frame_id: lidar
+    voxel_leaf_size: 0.03
+    outlier_mean_k: 20
+    outlier_stddev_mul: 3.0
+    ground_distance_threshold: 0.08
+    ground_max_iterations: 200
+    ground_eps_angle_deg: 15.0
+    cluster_tolerance: 0.10
+    cluster_min_size: 40
+    cluster_max_size: 100000
+    fit_distance_threshold: 0.04
+    fit_max_iterations: 200
+    min_classify_points: 30
